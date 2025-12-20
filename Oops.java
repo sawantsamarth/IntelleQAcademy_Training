@@ -56,6 +56,7 @@ class Savings extends Account {
         deposit(interest);
     }
 
+    @Override
     public void dispaly() {
         super.dispaly();
         System.out.println("Type: Savings");
@@ -72,6 +73,7 @@ class Current extends Account {
         this.limit = limit;
     }
 
+    @Override
     public void withdraw(double amt) {
         if (amt <= getBal() + limit) {
             super.withdraw(amt);
@@ -80,6 +82,7 @@ class Current extends Account {
         }
     }
 
+    @Override
     public void dispaly() {
         super.dispaly();
         System.out.println("Type: Current.");

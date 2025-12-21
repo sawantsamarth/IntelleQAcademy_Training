@@ -16,7 +16,7 @@ values
 create table checkout(
     checkin_id int,
     checkout_id int not null,
-    ph_no int not null,
+    phno int not null,
     address varchar(60) not null,
     foreign key (checkin_id) references checkins(checkin_id)
     -- A column in a table which refers to the primary key in another table. 
@@ -24,13 +24,17 @@ create table checkout(
 
 insert into checkout
 values
-(1, 10, 9090909090, "Channai" "Anna"),
-(2, 20, 8090909090, "Pune" "Sudha");
+(1, 10, 9090909090, "Channai"),
+(2, 20, 8090909090, "Pune");
 
 select * from checkins;
-
 select * from checkout;
 
-desc checkins;
 -- no deference in both of this desc and describe.
+desc checkins;
 describe checkout;
+
+drop table checkins;
+drop table checkout;
+
+drop database hotel;

@@ -20,7 +20,7 @@ public class VehicleController {
 
     // HTTP METHOD WHICH WE MAINLY USE ARE : GET, POST, PUT, PATCH, DELETE.
     
-    //  https://localhost:8080/api/vehicle/status
+    //  http://localhost:8080/api/vehicle/status
     @GetMapping("/status")
     public String getStatus(){
         return vehicleService.getServiceStatus();
